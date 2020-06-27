@@ -1,0 +1,9 @@
+[requires]
+sobjectizer/5.7.1@stiffstream/stable
+boost/1.69.0
+
+[generators]
+cmake
+
+[options]
+sobjectizer:shared=False
