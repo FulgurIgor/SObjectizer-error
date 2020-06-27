@@ -1,7 +1,7 @@
 os: linux
 language: python
 python: "3.7"
-dist: xenial
+dist: bionic
 compiler:
   - gcc
   - g++
@@ -9,6 +9,9 @@ install:
   - pip install conan
   - conan user
   - conan remote add stiffstream https://api.bintray.com/conan/stiffstream/public
+  - cmake --version
+  - gcc --version
+  - g++ --version
 script:
   - conan install .
   - cmake . -G "Unix Makefiles"
