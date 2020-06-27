@@ -8,8 +8,8 @@ compiler:
 install:
   - pip install conan
   - conan user
+  - conan remote add stiffstream https://api.bintray.com/conan/stiffstream/public
 script:
   - conan install .
   - cmake . -G "Unix Makefiles"
   - cmake --build .
-  - ctest .
