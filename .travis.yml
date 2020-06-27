@@ -1,4 +1,9 @@
 os: linux
+matrix:
+ - env:
+   - WITH_BOOST=TRUE
+ - env:
+   - WITH_BOOST=FALSE
 language: python
 python: "3.7"
 dist: bionic
@@ -6,6 +11,7 @@ compiler:
   - gcc
   - g++
 install:
+  - if [ "$WITH_BOOST" == "FALSE" ]; then sed -i "s;boost/1.73.0;;" conanfile.txt ; fi
   - pip install conan
   - conan user
   - conan remote add stiffstream https://api.bintray.com/conan/stiffstream/public
