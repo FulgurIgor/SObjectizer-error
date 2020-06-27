@@ -1,6 +1,6 @@
 [requires]
 sobjectizer/5.7.1@stiffstream/stable
-boost/1.69.0
+boost/1.73.0
 
 [generators]
 cmake
