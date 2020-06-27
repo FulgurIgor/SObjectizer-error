@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project(Server)
+project(SObjectizer-error)
 
 enable_language(CXX)
 set(CMAKE_CXX_STANDARD 17)
