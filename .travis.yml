@@ -13,6 +13,6 @@ install:
   - gcc --version
   - g++ --version
 script:
-  - conan install .
+  - conan install . --build=missing
   - cmake . -G "Unix Makefiles"
   - cmake --build .
